@@ -25,7 +25,7 @@
         "http://*/*",
         "https://*/*"
       ],
-      "js" : ["vipa-tools.js"],
+      "js" : ["proteus-tools.js"],
       "run_at" : "document_end",
       "all_frames" : false
     }
