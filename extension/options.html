@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Options</title>
+<!-- 
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/themes/base/jquery-ui.css" type="text/css" media="all"> 
+-->
+<link rel="stylesheet" href="lib/ui-lightness/jquery-ui-1.8.4.custom.css" type="text/css" media="all">
+<script type="text/javascript" src="lib/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="lib/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="options.js"></script>
+<style>
+section{
+ margin-top: 1em;
+}
+label {
+ font-weight:bold;
+ display:inline-block;
+}
+header{
+ font-size:larger;
+ text-shadow: rgba(0, 0, 0, 0.0976563) 2px 2px 2px;
+ margin-bottom: .25em;
+}
+#content {
+ margin-top:.5em;
+}
+#status {
+  font-size:larger;
+  min-height:1em;
+}
+input[type=text] {
+	resize: horizontal;
+}
+</style>
+</head>
+<body>
+<div id="status" style="opacity:0"></div>
+<div id="content">
+<div id="tabs">
+  <ul>
+    <li><a href="#installations">Server Installations</a></li>
+    <li><a href="#ui">UI</a></li>
+  </ul>
+  <div id="installations">
+    <div class="prop">
+        <label for="ws_path">Web Service Path:</label>
+        <input id="ws_path" value="/ws/browser" size="30" type="text">
+        <small class="instructions">Used by all server installations</small>
+    </div>
+    <h3 class="servers">Servers</h3>
+  </div>
+  
+  <div id="ui">
+    <div class="prop">
+      <label for="ui_tabs">Organize Extension Output in Tabs? </label>
+      <input id="ui_tabs" type="checkbox" value="true" checked>
+    </div>
+    <div class="prop">
+      <label for="show_pe_tree">Show the PageElement tree? </label>
+      <input id="show_pe_tree" type="checkbox" value="true">
+    </div>
+  </div>
+</div>
+
+
+<button id="save">Save</button>
+</div>
+</body>
+</html>

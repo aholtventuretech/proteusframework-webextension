@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Proteus Panel</title>
+<link rel="stylesheet" href="lib/ui-lightness/jquery-ui-1.8.4.custom.css" type="text/css" media="all">
+<script type="text/javascript" src="lib/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="lib/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="data_loader.js"></script>
+<style>
+body {
+ min-width: 30em;
+ font-size:85%;
+}
+section{
+ margin-top: 1em;
+}
+label {
+ font-weight:bold;
+ display:inline-block;
+ min-width: 5em;
+}
+header{
+ font-size:larger;
+ text-shadow: rgba(0, 0, 0, 0.0976563) 2px 2px 2px;
+ margin-bottom: .25em;
+ text-align:center;
+}
+#status {
+ text-align:center;
+}
+.headers table td{
+ vertical-align:top;
+}
+#rc_debug_toggle{
+ margin-left: 1em;
+ display:inline-block;
+}
+div.prop {
+ padding: 2px 3px 2px 0;
+ display:table-row;
+}
+.prop.even{
+ background-color:#fff;
+}
+.prop label {
+ padding:0 .5em;
+ white-space: nowrap;
+}
+.prop label,
+.prop span.value {
+ display:table-cell;
+}
+progress {
+ outline: 1px outset #ccc;
+}
+.ui-tabs .ui-tabs-nav li a{
+ padding: .25em .5em;
+}
+.ui-tabs{
+ padding:0;
+}
+div.ui-tabs-panel{
+ line-height:1.4;
+}
+ol, ul{
+ margin:0 0 5px 5px;
+ padding:0;
+}
+div.pe_tree,
+.pe_tree .pe .pe .pe li .pe,
+.pe_tree .pe .pe .pe .pe .pe .pe .pe li .pe {
+ font-size: .90em; 
+}
+div.scope_session {
+ color:orange;
+}
+div.scope_request {
+ color:red;
+}
+</style>
+
+</head>
+<body>
+<div id="status"><p>Loading</p><progress id="status_progress"></progress></div>
+<div id="content" style="display:none">
+<div class="prop" id="cache_info_con" style="display:none;">
+  <label for="cache_info">Cacheable</label>
+  <span id="cache_info" class="value">false</span>
+</div>
+<div class="prop rc_debug" id="rc_debug_con" style="display:none;">
+  <label for="rc_debug">RC Debug</label>
+  <span class="value"><span id="rc_debug">false</span> <button id="rc_debug_toggle">Toggle</button></span>
+</div>
+
+
+</div>
+
+</body>
+</html>
