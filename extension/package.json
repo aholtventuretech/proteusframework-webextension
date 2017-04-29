@@ -4,16 +4,16 @@
   "description": "Proteus Web Browser Extension",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VentureTech/proteusframework-webextension.git"
+	"type": "git",
+	"url": "git+https://github.com/VentureTech/proteusframework-webextension.git"
   },
   "author": "Russ Tennant",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VentureTech/proteusframework-webextension/issues"
+	"url": "https://github.com/VentureTech/proteusframework-webextension/issues"
   },
   "homepage": "https://github.com/VentureTech/proteusframework-webextension#readme"
 }

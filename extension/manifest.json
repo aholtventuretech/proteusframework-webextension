@@ -9,49 +9,49 @@
   "minimum_chrome_version": "22",
   "omnibox": { "keyword" : "pf" },
   "page_action": {
-    "default_icon":	{"19": "images/icon-19.png", "38": "images/icon-38.png"},
+	"default_icon":	{"19": "images/icon-19.png", "38": "images/icon-38.png"},
 	"default_title": "Web Developer Information",
 	"default_popup": "popup.html"
   },
   "background": {
-  	"scripts":[ "bg/database.js", "bg/omni.js", "bg/main.js" ],
-  	"persistent": true
+	"scripts":[ "bg/database.js", "bg/omni.js", "bg/main.js" ],
+	"persistent": true
   },
 
   "options_page": "options.html",
   "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
+	"page": "options.html",
+	"chrome_style": true
   },
 
   "content_scripts" : [
-    {
-      "matches" : [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js" : ["proteus-tools.js"],
-      "run_at" : "document_end",
-      "all_frames" : false
-    }
+	{
+	  "matches" : [
+		"http://*/*",
+		"https://*/*"
+	  ],
+	  "js" : ["proteus-tools.js"],
+	  "run_at" : "document_end",
+	  "all_frames" : false
+	}
   ],
 
   "commands": {
-    "_execute_page_action": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+Comma"
-      }
-    }
+	"_execute_page_action": {
+	  "suggested_key": {
+		"default": "Ctrl+Shift+Comma"
+	  }
+	}
   },
 
   "devtools_page": "devtools/devtools.html",
 
   "permissions": [
-  	"alarms",
+	"alarms",
 	"notifications", 
 	"tabs",
 	"webRequest",
-    "tts",
+	"tts",
 	"*://*/*"
   ]
 }
