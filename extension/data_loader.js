@@ -14,13 +14,12 @@ function init(){
 		updateCmsInfo(tabInfo);
 		loadServers();
 	});
-	if(localStorage.ui_tabs != "false") {
-		var tabDIV = document.createElement("div");
-		tabDIV.setAttribute("id", "tabs");
-		document.getElementById('content').appendChild(tabDIV);
-		tabUL = document.createElement("ul");
-		tabDIV.appendChild(tabUL);
-	}
+
+	var tabDIV = document.createElement("div");
+	tabDIV.setAttribute("id", "tabs");
+	document.getElementById('content').appendChild(tabDIV);
+	tabUL = document.createElement("ul");
+	tabDIV.appendChild(tabUL);
 }
 window.addEventListener('load', init);
 
@@ -48,9 +47,13 @@ function updateCmsInfo(tabInfo) {
 			cmsInfo = rh["X-CMS-Info"],
 			scope = cmsInfo != null ? cmsInfo.replace(/scope=([A-Z]+)/, "$1") : "N/A";
 		switch(scope) {
-			case "APPLICATION": cacheInfo = "Yes (public)"; break;
-			case "SESSION": cacheInfo = "Yes (private)"; break;
-			case "REQUEST": cacheInfo = "No"; break;
+			case "APPLICATION": cacheInfo = "Yes (public)";
+			break;
+			case "SESSION": cacheInfo = "Yes (private)";
+			break;
+			case "REQUEST": cacheInfo = "No";
+                chrome.tts.speak("Ouch, Not Cacheable");
+			break;
 		}
 		$('#cache_info').text(cacheInfo);
 		for(var name in rh){
