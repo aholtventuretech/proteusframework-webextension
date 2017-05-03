@@ -1,0 +1,22 @@
+{
+  "name": "proteusframework-webextension",
+  "homepage": "https://github.com/VentureTech/proteusframework-webextension",
+  "authors": [
+    "russ@proteus.co"
+  ],
+  "description": "",
+  "main": "proteus-tools.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dexie": "~1.4.1",
+    "bluebird": "^3.4.6"
+  }
+}
